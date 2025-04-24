@@ -44,7 +44,7 @@ class CurrentAccount(BankAccount):
             print("\nOverdraft limit exceeded!\n")
     
     def display_account_type(self):
-        print("Type: Current Account")
+        return "Type: Current Account"
 
 class SavingsAccount(BankAccount):
     def __init__(self):
@@ -63,13 +63,13 @@ class SavingsAccount(BankAccount):
             
     
     def display_account_type(self):
-        print("Type: Savings Account")
+        return "Type: Savings Account"
 
 
 def print_account_details(account):
     print(f"Account Number: {account.account_number}")
     print(f"Balance: {account.balance}")
-    account.display_account_type()
+    print(account.display_account_type())
     print("-"*25)
     
 new_savings_account=SavingsAccount()
